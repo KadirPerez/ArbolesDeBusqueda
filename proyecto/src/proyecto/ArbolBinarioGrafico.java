@@ -11,23 +11,10 @@ import javax.swing.JPanel;
 
 public final class ArbolBinarioGrafico extends JDialog{
     
-    public ArbolBinarioGrafico(String titulo){
+    public ArbolBinarioGrafico(String titulo, ArbolBinario arbol){
 	setBounds(600, 50, 1300, 1000);
         setTitle(titulo);
         setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-	
-	int diametro = 0;
-	
-	ArbolBinario arbol = new ArbolBinario();
-	
-	arbol.insertar(10);
-	arbol.insertar(7);
-	arbol.insertar(3);
-	arbol.insertar(12);
-	arbol.insertar(8);
-	arbol.insertar(15);
-	arbol.insertar(17);
-	arbol.insertar(16);
 	
 	ArbolPanel arbolPanel = new ArbolPanel(arbol);
         getContentPane().add(arbolPanel);
@@ -56,22 +43,23 @@ class ArbolPanel extends JPanel {
         g2d.setStroke(new BasicStroke(3)); // Grosor de la línea
 
         dibujarRaiz(g2d, arbol.getRaiz());
-	
-	dibujarHijos(g2d, getWidth()/2, 75, arbol.getRaiz());
-	
+		
     }
     
     private void dibujarRaiz(Graphics2D g2d, Nodo raiz){
-	int padreX = getWidth() / 2;
-        int padreY = 75;
-        int radio = 50;
-        
-        g2d.setColor(Color.BLACK);
-        g2d.fillOval(padreX - radio, padreY - radio, 2 * radio, 2 * radio);
-	
-	g2d.setFont(new Font("Arial", Font.PLAIN, 30));
-	g2d.setColor(Color.WHITE);
-	g2d.drawString(raiz.valor + "", padreX - radio/2, padreY + radio/2);
+	if(raiz != null){
+	    int padreX = getWidth() / 2;
+	    int padreY = 75;
+	    int radio = 50;
+
+	    g2d.setColor(Color.BLACK);
+	    g2d.fillOval(padreX - radio, padreY - radio, 2 * radio, 2 * radio);
+
+	    g2d.setFont(new Font("Arial", Font.PLAIN, 30));
+	    g2d.setColor(Color.WHITE);
+	    g2d.drawString(raiz.valor + "", padreX - radio/2, padreY + radio/2);
+	    dibujarHijos(g2d, padreX, padreY, arbol.getRaiz());
+	}
     }
     
     private void dibujarHijos(Graphics2D g2d, int padreX, int padreY, Nodo padre){

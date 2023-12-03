@@ -1,13 +1,13 @@
+
 package proyecto;
 
-/**
- *
- * @author kadirperez
- */
 public class GUI extends javax.swing.JFrame {
+    
+    private ArbolBinario arbol;
 
     public GUI() {
 	initComponents();
+	arbol = new ArbolBinario();
     }
     
     @SuppressWarnings("unchecked")
@@ -121,6 +121,11 @@ public class GUI extends javax.swing.JFrame {
         });
 
         eliminarButton1.setText("Eliminar nodos");
+        eliminarButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminarButton1ActionPerformed(evt);
+            }
+        });
 
         mostraLvButton1.setText("Mostrar nivel");
 
@@ -244,11 +249,11 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_mostrarLvText1ActionPerformed
 
     private void mostrarButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarButton1ActionPerformed
-	ArbolBinarioGrafico arbolGrafico = new ArbolBinarioGrafico("");
+	ArbolBinarioGrafico arbolGrafico = new ArbolBinarioGrafico("", arbol);
     }//GEN-LAST:event_mostrarButton1ActionPerformed
 
     private void añadirButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_añadirButton1ActionPerformed
-        // TODO add your handling code here:
+        arbol.insertar(Integer.parseInt(añadirText1.getText()));
     }//GEN-LAST:event_añadirButton1ActionPerformed
 
     private void codigoButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codigoButton1ActionPerformed
@@ -258,6 +263,10 @@ public class GUI extends javax.swing.JFrame {
     private void añadirText1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_añadirText1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_añadirText1ActionPerformed
+
+    private void eliminarButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarButton1ActionPerformed
+        arbol.eliminar(Integer.parseInt(eliminarText1.getText()));
+    }//GEN-LAST:event_eliminarButton1ActionPerformed
 
     /**
      * @param args the command line arguments
