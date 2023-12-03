@@ -8,7 +8,7 @@ import java.util.Random;
  * @author felix
  */
 public class ArbolBinario {
-    Nodo raiz;
+    private Nodo raiz;
 
     public ArbolBinario() {
         this.raiz = null;
