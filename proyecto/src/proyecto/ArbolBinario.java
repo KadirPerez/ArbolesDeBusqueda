@@ -17,10 +17,10 @@ public class ArbolBinario {
     public ArrayList<Integer> generarNúmeros(int k, int n)
     {
         ArrayList<Integer> salida = new ArrayList();
-        Random rndm = new Random();
+        Random random = new Random();
         for (int i = 0; i < n; i++)
         {
-            salida.add(rndm.nextInt(k+1)  );
+            salida.add(random.nextInt(k + 1));
         }
         return salida;
     }
@@ -28,11 +28,9 @@ public class ArbolBinario {
     {
         ArrayList<Integer> aux = obtenerNivel(1, 1, nuevaRaíz);
         int iterador = 1;
-        while (aux.size() != 0)
-        {
+        while (!aux.isEmpty()) {
             System.out.print("Nivel " + iterador + ": ");
-            for (Integer i:aux)
-            {
+            for (Integer i: aux) {
                 System.out.print(i + " ");
             }
             System.out.println("");
@@ -103,6 +101,11 @@ public class ArbolBinario {
             return cod;
         }
     }
+    
+    public void insertarNumeros(ArrayList<Integer> numeros) {
+        for (Integer n: numeros) insertar(n);
+    }
+    
     public void insertar(int valor) {
         raiz = insertarRecursivo(raiz, valor);
     }
