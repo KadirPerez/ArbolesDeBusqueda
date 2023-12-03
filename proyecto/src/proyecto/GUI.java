@@ -4,10 +4,12 @@ package proyecto;
 public class GUI extends javax.swing.JFrame {
     
     private ArbolBinario arbol;
+    private ArbolBinarioGrafico arbolGrafico;
 
     public GUI() {
 	initComponents();
 	arbol = new ArbolBinario();
+	arbolGrafico = new ArbolBinarioGrafico("Arbol binario", arbol);
     }
     
     @SuppressWarnings("unchecked")
@@ -249,7 +251,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_mostrarLvText1ActionPerformed
 
     private void mostrarButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarButton1ActionPerformed
-	ArbolBinarioGrafico arbolGrafico = new ArbolBinarioGrafico("", arbol);
+	arbolGrafico.refrescar(arbol);
     }//GEN-LAST:event_mostrarButton1ActionPerformed
 
     private void añadirButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_añadirButton1ActionPerformed

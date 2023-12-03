@@ -23,6 +23,11 @@ public final class ArbolBinarioGrafico extends JDialog{
         setVisible(true);
     } 
     
+    public void refrescar(ArbolBinario arbol){
+	ArbolPanel arbolPanel = new ArbolPanel(arbol);
+        getContentPane().add(arbolPanel);
+	repaint();
+    }
 }
 
 class ArbolPanel extends JPanel {
