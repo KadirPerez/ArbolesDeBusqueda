@@ -102,61 +102,45 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="añadirButton1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                              <Component id="codigoButton1" min="-2" pref="119" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                                      <Component id="mostraLvButton1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="eliminarButton1" alignment="0" min="-2" pref="119" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="eliminarText1" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                          <Component id="códigoText1" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                          <Component id="añadirText1" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                          <Component id="mostrarLvText1" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                      </Group>
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                      <Component id="códigoLabel1" min="-2" pref="86" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
-                      <Component id="mostrarButton1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="recorrerBox1" alignment="0" min="-2" pref="96" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Component id="recorrerButton1" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="códigoLabel1" alignment="1" min="-2" pref="86" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                              <Component id="recorrerButton1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="codigoButton1" alignment="0" min="-2" pref="119" max="-2" attributes="0"/>
+                              <Component id="eliminarButton1" alignment="0" min="-2" pref="119" max="-2" attributes="0"/>
+                              <Component id="mostraLvButton1" min="-2" pref="118" max="-2" attributes="0"/>
+                              <Component id="añadirButton1" alignment="0" min="-2" pref="119" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="eliminarText1" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="códigoText1" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="añadirText1" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="mostrarLvText1" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="49" max="32767" attributes="0"/>
+              <EmptySpace pref="141" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-              <Component id="mostrarButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="añadirButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="añadirText1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -176,13 +160,13 @@
                   <Component id="codigoButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="códigoText1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="códigoLabel1" min="-2" pref="18" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="códigoLabel1" min="-2" pref="18" max="-2" attributes="0"/>
+              <EmptySpace pref="29" max="32767" attributes="0"/>
               <Component id="recorrerButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="recorrerBox1" min="-2" pref="34" max="-2" attributes="0"/>
-              <EmptySpace pref="49" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -204,14 +188,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="c&#xf3;digoText1">
-    </Component>
-    <Component class="javax.swing.JButton" name="mostrarButton1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Mostrar &#xe1;rbol"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mostrarButton1ActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JComboBox" name="recorrerBox1">
       <Properties>
