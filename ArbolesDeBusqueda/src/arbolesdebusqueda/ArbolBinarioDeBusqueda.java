@@ -34,13 +34,17 @@ public class ArbolBinarioDeBusqueda {
         System.out.println("Recorrido Preorden: " + arbol.recorrerPreorden(arbol.raiz));
         System.out.println("Recorrido Postorden: " + arbol.recorrerPostorden(arbol.raiz));
         System.out.println("Mostrar nivel: ");
-        ArrayList<Integer> lv0Aux = arbol.mostrarNivel(4);
+        ArrayList<Integer> lv0Aux = arbol.mostrarNivel(2);
         for (Integer i:lv0Aux)
         {
             System.out.print(i.toString() + "--");
         }
         System.out.println("Codigo de 20:");
-        System.out.println(arbol.obtenerCódigo(7));
+        System.out.println(arbol.obtenerCódigo(12));
+        
+        
+        
+        arbol.recorrerPorNivel(arbol.raiz);
         // Eliminación de nodos
         arbol.eliminar(5);
         arbol.eliminar(15);
@@ -51,11 +55,12 @@ public class ArbolBinarioDeBusqueda {
         System.out.println("Recorrido Postorden: " + arbol.recorrerPostorden(arbol.raiz));
         System.out.println("-------------------------------------------------");
         System.out.println("Mostrar nivel: ");
-        ArrayList<Integer> lv0 = arbol.mostrarNivel(4);
+        ArrayList<Integer> lv0 = arbol.mostrarNivel(2);
         for (Integer i:lv0)
         {
             System.out.print(i.toString() + "--");
         }
+        arbol.recorrerPorNivel(arbol.raiz);
         
     }
     

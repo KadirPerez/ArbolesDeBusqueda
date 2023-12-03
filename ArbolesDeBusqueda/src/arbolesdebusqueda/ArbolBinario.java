@@ -28,9 +28,26 @@ public class ArbolBinario {
         }
         return salida;
     }
+    public void recorrerPorNivel (Nodo nuevaRaíz)
+    {
+        ArrayList<Integer> aux = obtenerNivel(1, 1, nuevaRaíz);
+        int iterador = 1;
+        while (aux.size() != 0)
+        {
+            System.out.print("Nivel " + iterador + ": ");
+            for (Integer i:aux)
+            {
+                System.out.print(i + " ");
+            }
+            System.out.println("");
+            iterador += 1;
+            aux = obtenerNivel(iterador, 1, nuevaRaíz );
+        }
+    }
+ 
     public ArrayList<Integer> mostrarNivel (int nivel)
     {
-        ArrayList<Integer> salida = obtenerNivel(nivel, 0, this.raiz);
+        ArrayList<Integer> salida = obtenerNivel(nivel, 1, this.raiz);
         return salida;
     }
     private ArrayList<Integer> obtenerNivel (int lv, int lvActual, Nodo nodoActual)
@@ -63,16 +80,9 @@ public class ArbolBinario {
         String código = "";
         código = obtenerCódigo(número, this.raiz, código);
         String codInv = "";
-        for (char i:código.toCharArray())
+        for (int i = código.length()-1; i >= 0; i--)
         {
-            if (i == '0')
-            {
-                codInv += "1";
-            }
-            else
-            {
-                codInv += "0";
-            }
+            codInv += código.charAt(i);
         }
         return codInv;
     }
