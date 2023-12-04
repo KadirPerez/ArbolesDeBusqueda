@@ -332,13 +332,21 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_nivelTextFieldActionPerformed
 
     private void insertarNumeroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertarNumeroButtonActionPerformed
-        arbol.insertar(Integer.parseInt(añadirText1.getText()));
-	arbolGrafico.refrescar(arbol);
+        try {
+            arbol.insertar(Integer.parseInt(añadirText1.getText()));
+            arbolGrafico.refrescar(arbol);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_insertarNumeroButtonActionPerformed
 
     private void codigoButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codigoButton1ActionPerformed
-        codigoLabel.setText(arbol.obtenerCódigo(Integer.parseInt(codigoTextField.getText())));
-        repaint();
+        try {
+            codigoLabel.setText(arbol.obtenerCódigo(Integer.parseInt(codigoTextField.getText())));
+            repaint();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_codigoButton1ActionPerformed
 
     private void añadirText1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_añadirText1ActionPerformed
@@ -346,20 +354,28 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_añadirText1ActionPerformed
 
     private void eliminarNumeroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarNumeroButtonActionPerformed
-        arbol.eliminar(Integer.parseInt(eliminarText1.getText()));
-	arbolGrafico.refrescar(arbol);
+        try {
+            arbol.eliminar(Integer.parseInt(eliminarText1.getText()));
+            arbolGrafico.refrescar(arbol);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_eliminarNumeroButtonActionPerformed
 
     private void generarNumerosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarNumerosButtonActionPerformed
-        numeros = arbol.generarNúmeros(Integer.parseInt(numeroMaximoTextField.getText()), Integer.parseInt(cantidadTextField.getText()));
-        
-        String arrayList = "";
-        for (int i = 0; i < numeros.size(); i++) {
-            arrayList += numeros.get(i) + (i == numeros.size() - 1 ? "" : ", ");
+        try {
+            numeros = arbol.generarNúmeros(Integer.parseInt(numeroMaximoTextField.getText()), Integer.parseInt(cantidadTextField.getText()));
+
+            String arrayList = "";
+            for (int i = 0; i < numeros.size(); i++) {
+                arrayList += numeros.get(i) + (i == numeros.size() - 1 ? "" : ", ");
+            }
+
+            arrayListLabel.setText(arrayList);
+            repaint();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        
-        arrayListLabel.setText(arrayList);
-        repaint();
     }//GEN-LAST:event_generarNumerosButtonActionPerformed
 
     private void numeroMaximoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numeroMaximoTextFieldActionPerformed
@@ -377,8 +393,6 @@ public class GUI extends javax.swing.JFrame {
 
     private void recorrerButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recorrerButton1ActionPerformed
         String metodo = (String) recorrerBox1.getSelectedItem();
-        
-        System.out.println(metodo);
         
         String resultado = "";
         switch (metodo) {
@@ -408,8 +422,12 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_recorrerBox1ActionPerformed
 
     private void mostraLvButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostraLvButton1ActionPerformed
-        nivelLabel.setText(arbol.mostrarNivel(Integer.parseInt(nivelTextField.getText())));
-        repaint();
+        try {
+            nivelLabel.setText(arbol.mostrarNivel(Integer.parseInt(nivelTextField.getText())));
+            repaint();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_mostraLvButton1ActionPerformed
 
     /**
