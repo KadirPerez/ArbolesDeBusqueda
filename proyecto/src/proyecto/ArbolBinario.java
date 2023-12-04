@@ -2,11 +2,8 @@ package proyecto;
 
 import java.util.ArrayList;
 import java.util.Random;
-
-/**
- *
- * @author felix
- */
+import java.util.concurrent.atomic.AtomicBoolean;
+    
 public class ArbolBinario {
     private Nodo raiz;
 
@@ -107,15 +104,6 @@ public class ArbolBinario {
     public void insertarNumeros(ArrayList<Integer> numeros) {
         for (Integer n: numeros) insertar(n);
     }
-    
-    private int encontrarMenorValor(Nodo nodo) {
-        int minValor = nodo.getValor();
-        while (nodo.getIzquierda() != null) {
-            minValor = nodo.getIzquierda().getValor();
-            nodo = nodo.getIzquierda();
-        }
-        return minValor;
-    }
 
     public String recorrerInorden(Nodo nodo) {
 	StringBuilder resultado = new StringBuilder();
@@ -187,21 +175,26 @@ public class ArbolBinario {
         return balancear(nodo);
     }
 
-    public void eliminar(int valor) {
-        raiz = eliminarRecursivo(raiz, valor);
+    public boolean eliminar(int valor) {
+        AtomicBoolean eliminado = new AtomicBoolean(false);
+    
+        raiz = eliminarRecursivo(raiz, valor, eliminado);
+        
+        return eliminado.get();
     }
 
-    private Nodo eliminarRecursivo(Nodo nodo, int valor) {
+    private Nodo eliminarRecursivo(Nodo nodo, int valor, AtomicBoolean eliminado) {
         if (nodo == null) {
             return nodo;
         }
 
         if (valor < nodo.getValor()) {
-            nodo.setIzquierda(eliminarRecursivo(nodo.getIzquierda(), valor));
+            nodo.setIzquierda(eliminarRecursivo(nodo.getIzquierda(), valor, eliminado));
         } else if (valor > nodo.getValor()) {
-            nodo.setDerecha(eliminarRecursivo(nodo.getDerecha(), valor));
+            nodo.setDerecha(eliminarRecursivo(nodo.getDerecha(), valor, eliminado));
         } else {
             // Nodo encontrado, realizar la eliminación
+            eliminado.set(true);
             if (nodo.getIzquierda() == null || nodo.getDerecha() == null) {
                 // Caso 1 o 2: Nodo con uno o ningún hijo
                 Nodo temp = (nodo.getIzquierda() != null) ? nodo.getIzquierda() : nodo.getDerecha();
@@ -217,7 +210,7 @@ public class ArbolBinario {
                 // Caso 3: Nodo con dos hijos
                 Nodo sucesor = encontrarSucesor(nodo.getDerecha());
                 nodo.setValor(sucesor.getValor());
-                nodo.setDerecha(eliminarRecursivo(nodo.getDerecha(), sucesor.getValor()));
+                nodo.setDerecha(eliminarRecursivo(nodo.getDerecha(), sucesor.getValor(), eliminado));
             }
         }
 

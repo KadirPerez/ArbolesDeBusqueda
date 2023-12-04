@@ -5,7 +5,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Nodo {
+    
     private int valor, altura;
+    private Nodo izquierda, derecha;
 
     public int getAltura() {
 	return altura;
@@ -14,7 +16,7 @@ public class Nodo {
     public void setAltura(int altura) {
 	this.altura = altura;
     }
-    private Nodo izquierda, derecha;
+    
 
     public Nodo(int valor) {
         this.valor = valor;
@@ -45,20 +47,13 @@ public class Nodo {
 	this.valor = valor;
     }
     
-    public int nodos(Nodo nodo){
-	if(nodo != null){
-	    return nodos(nodo.getIzquierda()) + nodos(nodo.getDerecha()) + 1;
-	}
-	return 0;
-    }
-    
-    public int obtenerNivelesDebajo(Nodo nodo) {
-        if (nodo == null) {
+    public int obtenerNivelesDebajo() {
+        if (this == null) {
             return 0;
         }
 
         Queue<Nodo> queue = new LinkedList<>();
-        queue.offer(nodo);
+        queue.offer(this);
 
         int niveles = 0;
 

@@ -24,9 +24,5 @@ public final class ArbolBinarioGrafico extends JFrame {
 	
         setVisible(true);
     } 
-    
-    public void refrescar(ArbolBinario arbol) {
-        repaint();
-        }
 }
 

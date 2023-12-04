@@ -163,6 +163,11 @@
                   </Group>
               </Group>
           </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="eliminadoLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -187,7 +192,9 @@
                   <Component id="eliminarNumeroButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="eliminarText1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="eliminadoLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="34" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                       <Component id="recorrerButton1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
@@ -197,21 +204,21 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                       <Component id="nivelLabel" alignment="1" min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="nivelTextField" min="-2" pref="35" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="mostraLvButton1" max="32767" attributes="0"/>
+                  <Component id="mostraLvButton1" min="-2" pref="35" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="3" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                       <Component id="codigoButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="codigoTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="codigoLabel" min="-2" pref="23" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="54" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -347,6 +354,8 @@
     <Component class="javax.swing.JLabel" name="codigoLabel">
     </Component>
     <Component class="javax.swing.JLabel" name="nivelLabel">
+    </Component>
+    <Component class="javax.swing.JLabel" name="eliminadoLabel">
     </Component>
   </SubComponents>
 </Form>

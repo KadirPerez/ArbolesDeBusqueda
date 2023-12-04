@@ -17,7 +17,7 @@ public class ArbolPanel extends JPanel {
     }
     
     public Dimension getPreferredSize() {
-	return new Dimension(6000, 3000); // Especifica el tamaño preferido del panel
+	return new Dimension(6000, 3000);
     }
     
     @Override
@@ -34,7 +34,7 @@ public class ArbolPanel extends JPanel {
 	if (raiz != null) {
 	    int ancho = 1;
 	    int alto = 60;
-	    int niveles = raiz.obtenerNivelesDebajo(raiz);
+	    int niveles = raiz.obtenerNivelesDebajo();
 	    int extremos = ((int) Math.pow(2, niveles + 1) - 1) * 10;
 		    
 	    int radio = 25;
