@@ -15,10 +15,10 @@ public final class ArbolBinarioGrafico extends JFrame {
         
 	arbolPanel = new ArbolPanel(arbol);
         
-        JScrollPane scrollPane = new JScrollPane();
+        JScrollPane scrollPane = new JScrollPane(arbolPanel);
+	
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        scrollPane.setViewportView(arbolPanel);
         
         getContentPane().add(scrollPane);
 	
