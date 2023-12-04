@@ -14,38 +14,49 @@ public class ArbolBinario {
         this.raiz = null;
     }
 
-    public ArrayList<Integer> generarNúmeros(int k, int n)
-    {
+    public ArrayList<Integer> generarNúmeros(int k, int n) {
         ArrayList<Integer> salida = new ArrayList();
         Random random = new Random();
+        
         for (int i = 0; i < n; i++)
-        {
             salida.add(random.nextInt(k + 1));
-        }
+
         return salida;
     }
-    public void recorrerPorNivel (Nodo nuevaRaíz)
-    {
+    
+    public String recorrerPorNivel (Nodo nuevaRaíz) {
         ArrayList<Integer> aux = obtenerNivel(1, 1, nuevaRaíz);
         int iterador = 1;
+        
+        String resultado = "";
+        
         while (!aux.isEmpty()) {
             System.out.print("Nivel " + iterador + ": ");
             for (Integer i: aux) {
-                System.out.print(i + " ");
+                resultado += i + ", ";
             }
+            
             System.out.println("");
             iterador += 1;
             aux = obtenerNivel(iterador, 1, nuevaRaíz );
         }
+        
+        return resultado;
     }
  
-    public ArrayList<Integer> mostrarNivel (int nivel)
-    {
+public String mostrarNivel (int nivel) {
         ArrayList<Integer> salida = obtenerNivel(nivel, 1, this.raiz);
-        return salida;
+        String aux = "";
+        
+        for (Integer i:salida)
+            aux += i + ", ";
+        
+        aux = aux.substring(aux.length() - 3);
+        
+        return aux;
     }
-    private ArrayList<Integer> obtenerNivel (int lv, int lvActual, Nodo nodoActual)
-    {
+    
+    private ArrayList<Integer> obtenerNivel (int lv, int lvActual, Nodo nodoActual) {
         ArrayList<Integer> salida = new ArrayList();
         ArrayList<Integer> aux;
         if (lvActual == lv)
@@ -69,36 +80,27 @@ public class ArbolBinario {
         }
         return salida;
     }
-    public String obtenerCódigo(int número)
-    {
+    
+    public String obtenerCódigo(int número) {
         String código = "";
         código = obtenerCódigo(número, this.raiz, código);
-        String codInv = "";
-        for (int i = código.length()-1; i >= 0; i--)
-        {
-            codInv += código.charAt(i);
-        }
-        return codInv;
+           
+        return new StringBuilder(código).reverse().toString();
     }
-    public String obtenerCódigo (int número, Nodo nodoActual, String cod)
-    {
-        if (número == nodoActual.getValor())
-        {
-            return cod;
-        }
-        else
-        {
-            if (número > nodoActual.getValor())
-            {
-                cod += "1";
-                cod = obtenerCódigo (número, nodoActual.getDerecha(), cod);
+    
+    private String obtenerCódigo (int número, Nodo nodoActual, String codigo) {
+        if (número == nodoActual.getValor()) {
+            return codigo;
+        } else {
+            if (número > nodoActual.getValor()) {
+                codigo += "1";
+                codigo = obtenerCódigo (número, nodoActual.getDerecha(), codigo);
+            } else {
+                codigo += "0";
+                codigo = obtenerCódigo (número, nodoActual.getIzquierda(), codigo);
             }
-            else
-            {
-                cod += "0";
-                cod = obtenerCódigo (número, nodoActual.getIzquierda(), cod);
-            }
-            return cod;
+            
+            return codigo;
         }
     }
     
@@ -117,7 +119,6 @@ public class ArbolBinario {
 
         if (valor < nodo.getValor())  nodo.setIzquierda(insertarRecursivo(nodo.getIzquierda(), valor));
         else if (valor > nodo.getValor()) nodo.setDerecha(insertarRecursivo(nodo.getDerecha(), valor));
-
 
         return nodo;
     }
@@ -168,7 +169,7 @@ public class ArbolBinario {
     private void recorrerInordenAux(Nodo nodo, StringBuilder resultado) {
 	if (nodo != null) {
 	    recorrerInordenAux(nodo.getIzquierda(), resultado);
-	    resultado.append(nodo.getValor()).append(" ");
+	    resultado.append(nodo.getValor()).append(", ");
 	    recorrerInordenAux(nodo.getDerecha(), resultado);
 	}
     }
@@ -181,7 +182,7 @@ public class ArbolBinario {
 
     private void recorrerPreordenAux(Nodo nodo, StringBuilder resultado) {
 	if (nodo != null) {
-	    resultado.append(nodo.getValor()).append(" ");
+	    resultado.append(nodo.getValor()).append(", ");
 	    recorrerPreordenAux(nodo.getIzquierda(), resultado);
 	    recorrerPreordenAux(nodo.getDerecha(), resultado);
 	}
@@ -197,7 +198,7 @@ public class ArbolBinario {
 	if (nodo != null) {
 	    recorrerPostordenAux(nodo.getIzquierda(), resultado);
 	    recorrerPostordenAux(nodo.getDerecha(), resultado);
-	    resultado.append(nodo.getValor()).append(" ");
+	    resultado.append(nodo.getValor()).append(", ");
 	}
     }
 

@@ -104,34 +104,41 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="arrayListScrollPane" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="recorrerBox1" alignment="0" min="-2" pref="96" max="-2" attributes="0"/>
+                      <Component id="insertarNumeroButton" min="-2" pref="132" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="añadirText1" min="-2" pref="71" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="eliminarNumeroButton" min="-2" pref="132" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="eliminarText1" min="-2" pref="71" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="insertarNumerosButton" alignment="0" max="32767" attributes="0"/>
+                  <Component id="arrayListScrollPane" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
                                       <Component id="recorrerButton1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="recorrerBox1" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="códigoLabel1" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="codigoButton1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="codigoTextField" min="-2" pref="71" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="añadirButton1" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="codigoButton1" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="mostraLvButton1" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="eliminarButton1" alignment="0" min="-2" pref="132" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="eliminarText1" alignment="0" pref="71" max="32767" attributes="0"/>
-                                  <Component id="códigoText1" alignment="0" pref="71" max="32767" attributes="0"/>
-                                  <Component id="mostrarLvText1" alignment="0" pref="71" max="32767" attributes="0"/>
-                                  <Component id="añadirText1" alignment="0" max="32767" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jScrollPane1" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="codigoLabel" min="-2" pref="77" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
-                          <Component id="insertarNumerosButton" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="generarNumerosButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
@@ -142,12 +149,19 @@
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="numeroMaximoTextField" min="-2" pref="64" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="121" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="mostraLvButton1" min="-2" pref="120" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="nivelTextField" min="-2" pref="71" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                              <Component id="nivelLabel" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="14" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -164,41 +178,40 @@
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="arrayListScrollPane" min="-2" pref="35" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="insertarNumerosButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="códigoLabel1" min="-2" pref="18" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="recorrerButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace pref="60" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="añadirButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="añadirText1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="eliminarButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="eliminarText1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="mostraLvButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="mostrarLvText1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="codigoButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="códigoText1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                  </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="insertarNumerosButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="insertarNumeroButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="añadirText1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="eliminarNumeroButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="eliminarText1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <Component id="recorrerBox1" min="-2" pref="34" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="recorrerButton1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="recorrerBox1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jScrollPane1" min="-2" pref="35" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="nivelTextField" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="nivelLabel" alignment="1" min="-2" pref="35" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="mostraLvButton1" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="codigoButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="codigoTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="codigoLabel" min="-2" pref="23" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="54" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -209,17 +222,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eliminarText1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="mostrarLvText1">
+    <Component class="javax.swing.JTextField" name="nivelTextField">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mostrarLvText1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nivelTextFieldActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="c&#xf3;digoLabel1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="C&#xf3;digo:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="c&#xf3;digoText1">
+    <Component class="javax.swing.JTextField" name="codigoTextField">
     </Component>
     <Component class="javax.swing.JComboBox" name="recorrerBox1">
       <Properties>
@@ -232,34 +240,42 @@
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="recorrerBox1ActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JButton" name="a&#xf1;adirButton1">
+    <Component class="javax.swing.JButton" name="insertarNumeroButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="A&#xf1;adir nodos"/>
+        <Property name="text" type="java.lang.String" value="Insertar n&#xfa;mero"/>
+        <Property name="actionCommand" type="java.lang.String" value="Insertar n&#xfa;mero"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="a&#xf1;adirButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="insertarNumeroButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="eliminarButton1">
+    <Component class="javax.swing.JButton" name="eliminarNumeroButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Eliminar nodos"/>
+        <Property name="text" type="java.lang.String" value="Eliminar n&#xfa;mero"/>
+        <Property name="actionCommand" type="java.lang.String" value="Eliminar n&#xfa;mero"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eliminarButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eliminarNumeroButtonActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="mostraLvButton1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Mostrar nivel"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mostraLvButton1ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="codigoButton1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Obtener c&#xf3;digo:"/>
+        <Property name="text" type="java.lang.String" value="Obtener c&#xf3;digo"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="codigoButton1ActionPerformed"/>
@@ -267,8 +283,11 @@
     </Component>
     <Component class="javax.swing.JButton" name="recorrerButton1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Recorrer"/>
+        <Property name="text" type="java.lang.String" value="Recorrer &#xc1;rbol"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="recorrerButton1ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="a&#xf1;adirText1">
       <Events>
@@ -318,6 +337,28 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="insertarNumerosButtonActionPerformed"/>
       </Events>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="recorrerLabel">
+          <Properties>
+            <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+              <Rectangle value="[0, 0, 0, 0]"/>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="codigoLabel">
+    </Component>
+    <Component class="javax.swing.JLabel" name="nivelLabel">
+      <Properties>
+        <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+          <Rectangle value="[0, 0, 0, 0]"/>
+        </Property>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

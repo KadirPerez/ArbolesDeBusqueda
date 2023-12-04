@@ -34,12 +34,11 @@ public class GUI extends javax.swing.JFrame {
         recorrerButton = new javax.swing.JButton();
         añadirText = new javax.swing.JTextField();
         eliminarText1 = new javax.swing.JTextField();
-        mostrarLvText1 = new javax.swing.JTextField();
-        códigoLabel1 = new javax.swing.JLabel();
-        códigoText1 = new javax.swing.JTextField();
+        nivelTextField = new javax.swing.JTextField();
+        codigoTextField = new javax.swing.JTextField();
         recorrerBox1 = new javax.swing.JComboBox<>();
-        añadirButton1 = new javax.swing.JButton();
-        eliminarButton1 = new javax.swing.JButton();
+        insertarNumeroButton = new javax.swing.JButton();
+        eliminarNumeroButton = new javax.swing.JButton();
         mostraLvButton1 = new javax.swing.JButton();
         codigoButton1 = new javax.swing.JButton();
         recorrerButton1 = new javax.swing.JButton();
@@ -52,6 +51,10 @@ public class GUI extends javax.swing.JFrame {
         arrayListScrollPane = new javax.swing.JScrollPane();
         arrayListLabel = new javax.swing.JLabel();
         insertarNumerosButton = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        recorrerLabel = new javax.swing.JLabel();
+        codigoLabel = new javax.swing.JLabel();
+        nivelLabel = new javax.swing.JLabel();
 
         eliminarText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,40 +113,55 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        mostrarLvText1.addActionListener(new java.awt.event.ActionListener() {
+        nivelTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mostrarLvText1ActionPerformed(evt);
+                nivelTextFieldActionPerformed(evt);
             }
         });
-
-        códigoLabel1.setText("Código:");
 
         recorrerBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Preorden", "Postorden", "Inorden", "Por nivel" }));
-
-        añadirButton1.setText("Añadir nodos");
-        añadirButton1.addActionListener(new java.awt.event.ActionListener() {
+        recorrerBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                añadirButton1ActionPerformed(evt);
+                recorrerBox1ActionPerformed(evt);
             }
         });
 
-        eliminarButton1.setText("Eliminar nodos");
-        eliminarButton1.addActionListener(new java.awt.event.ActionListener() {
+        insertarNumeroButton.setText("Insertar número");
+        insertarNumeroButton.setActionCommand("Insertar número");
+        insertarNumeroButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eliminarButton1ActionPerformed(evt);
+                insertarNumeroButtonActionPerformed(evt);
+            }
+        });
+
+        eliminarNumeroButton.setText("Eliminar número");
+        eliminarNumeroButton.setActionCommand("Eliminar número");
+        eliminarNumeroButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminarNumeroButtonActionPerformed(evt);
             }
         });
 
         mostraLvButton1.setText("Mostrar nivel");
+        mostraLvButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mostraLvButton1ActionPerformed(evt);
+            }
+        });
 
-        codigoButton1.setText("Obtener código:");
+        codigoButton1.setText("Obtener código");
         codigoButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 codigoButton1ActionPerformed(evt);
             }
         });
 
-        recorrerButton1.setText("Recorrer");
+        recorrerButton1.setText("Recorrer Árbol");
+        recorrerButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                recorrerButton1ActionPerformed(evt);
+            }
+        });
 
         añadirText1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -183,6 +201,11 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        recorrerLabel.setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        jScrollPane1.setViewportView(recorrerLabel);
+
+        nivelLabel.setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -190,30 +213,35 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(insertarNumeroButton, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(añadirText1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(eliminarNumeroButton, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(eliminarText1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(insertarNumerosButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(arrayListScrollPane)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(recorrerBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(2, 2, 2)
-                                        .addComponent(recorrerButton1))
-                                    .addComponent(códigoLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(64, 64, 64)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(añadirButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(codigoButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(mostraLvButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(eliminarButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(23, 23, 23)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(eliminarText1, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
-                                    .addComponent(códigoText1, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
-                                    .addComponent(mostrarLvText1, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
-                                    .addComponent(añadirText1)))
-                            .addComponent(insertarNumerosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
+                                        .addComponent(recorrerButton1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(recorrerBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(codigoButton1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(codigoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane1)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(codigoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(generarNumerosButton)
                                 .addGap(23, 23, 23)
                                 .addComponent(jLabel1)
@@ -222,9 +250,15 @@ public class GUI extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
-                                .addComponent(numeroMaximoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 14, Short.MAX_VALUE)))
-                .addContainerGap())
+                                .addComponent(numeroMaximoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 121, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(mostraLvButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(nivelTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(34, 34, 34)
+                                .addComponent(nivelLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(3, 3, 3))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,34 +272,33 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(numeroMaximoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(arrayListScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
+                .addComponent(insertarNumerosButton)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(insertarNumeroButton)
+                    .addComponent(añadirText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eliminarNumeroButton)
+                    .addComponent(eliminarText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(recorrerButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(recorrerBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(nivelTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(nivelLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(mostraLvButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(insertarNumerosButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(códigoLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(recorrerButton1)
-                        .addGap(18, 18, 18))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(añadirButton1)
-                            .addComponent(añadirText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(eliminarButton1)
-                            .addComponent(eliminarText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(15, 15, 15)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(mostraLvButton1)
-                            .addComponent(mostrarLvText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(codigoButton1)
-                            .addComponent(códigoText1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27)))
-                .addComponent(recorrerBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(codigoButton1)
+                        .addComponent(codigoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(codigoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         pack();
@@ -299,27 +332,28 @@ public class GUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_eliminarText1ActionPerformed
 
-    private void mostrarLvText1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarLvText1ActionPerformed
+    private void nivelTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivelTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_mostrarLvText1ActionPerformed
+    }//GEN-LAST:event_nivelTextFieldActionPerformed
 
-    private void añadirButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_añadirButton1ActionPerformed
+    private void insertarNumeroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertarNumeroButtonActionPerformed
         arbol.insertar(Integer.parseInt(añadirText1.getText()));
 	arbolGrafico.refrescar(arbol);
-    }//GEN-LAST:event_añadirButton1ActionPerformed
+    }//GEN-LAST:event_insertarNumeroButtonActionPerformed
 
     private void codigoButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codigoButton1ActionPerformed
-        // TODO add your handling code here:
+        codigoLabel.setText(arbol.obtenerCódigo(Integer.parseInt(codigoTextField.getText())));
+        repaint();
     }//GEN-LAST:event_codigoButton1ActionPerformed
 
     private void añadirText1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_añadirText1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_añadirText1ActionPerformed
 
-    private void eliminarButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarButton1ActionPerformed
+    private void eliminarNumeroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarNumeroButtonActionPerformed
         arbol.eliminar(Integer.parseInt(eliminarText1.getText()));
 	arbolGrafico.refrescar(arbol);
-    }//GEN-LAST:event_eliminarButton1ActionPerformed
+    }//GEN-LAST:event_eliminarNumeroButtonActionPerformed
 
     private void generarNumerosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarNumerosButtonActionPerformed
         numeros = arbol.generarNúmeros(Integer.parseInt(numeroMaximoTextField.getText()), Integer.parseInt(cantidadTextField.getText()));
@@ -330,6 +364,7 @@ public class GUI extends javax.swing.JFrame {
         }
         
         arrayListLabel.setText(arrayList);
+        repaint();
     }//GEN-LAST:event_generarNumerosButtonActionPerformed
 
     private void numeroMaximoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numeroMaximoTextFieldActionPerformed
@@ -344,6 +379,43 @@ public class GUI extends javax.swing.JFrame {
         arbol.insertarNumeros(numeros);
         arbolGrafico.refrescar(arbol);
     }//GEN-LAST:event_insertarNumerosButtonActionPerformed
+
+    private void recorrerButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recorrerButton1ActionPerformed
+        String metodo = (String) recorrerBox1.getSelectedItem();
+        
+        System.out.println(metodo);
+        
+        String resultado = "";
+        switch (metodo) {
+            case "Preorden":
+                resultado = arbol.recorrerPreorden(arbol.getRaiz());
+                break;
+                
+            case "Postorden":
+                resultado = arbol.recorrerPostorden(arbol.getRaiz());
+                break;
+                
+            case "Inorden":
+                resultado = arbol.recorrerInorden(arbol.getRaiz());
+                break;
+                
+            case "Por nivel":
+                resultado = arbol.recorrerPorNivel(arbol.getRaiz());
+                break;
+        }
+        
+        recorrerLabel.setText(resultado);
+        repaint();
+    }//GEN-LAST:event_recorrerButton1ActionPerformed
+
+    private void recorrerBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recorrerBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_recorrerBox1ActionPerformed
+
+    private void mostraLvButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostraLvButton1ActionPerformed
+        nivelLabel.setText(arbol.mostrarNivel(Integer.parseInt(nivelTextField.getText())));
+        repaint();
+    }//GEN-LAST:event_mostraLvButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -384,33 +456,36 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel arrayListLabel;
     private javax.swing.JScrollPane arrayListScrollPane;
     private javax.swing.JButton añadirButton;
-    private javax.swing.JButton añadirButton1;
     private javax.swing.JTextField añadirText;
     private javax.swing.JTextField añadirText1;
     private javax.swing.JTextField cantidadTextField;
     private javax.swing.JButton codigoButton;
     private javax.swing.JButton codigoButton1;
+    private javax.swing.JLabel codigoLabel;
+    private javax.swing.JTextField codigoTextField;
     private javax.swing.JLabel códigoLabel;
-    private javax.swing.JLabel códigoLabel1;
     private javax.swing.JTextField códigoText;
-    private javax.swing.JTextField códigoText1;
     private javax.swing.JButton eliminarButton;
-    private javax.swing.JButton eliminarButton1;
+    private javax.swing.JButton eliminarNumeroButton;
     private javax.swing.JTextField eliminarText;
     private javax.swing.JTextField eliminarText1;
     private javax.swing.JButton generarNumerosButton;
+    private javax.swing.JButton insertarNumeroButton;
     private javax.swing.JButton insertarNumerosButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton mostraLvButton;
     private javax.swing.JButton mostraLvButton1;
     private javax.swing.JButton mostrarButton;
     private javax.swing.JTextField mostrarLvText;
-    private javax.swing.JTextField mostrarLvText1;
+    private javax.swing.JLabel nivelLabel;
+    private javax.swing.JTextField nivelTextField;
     private javax.swing.JTextField numeroMaximoTextField;
     private javax.swing.JComboBox<String> recorrerBox;
     private javax.swing.JComboBox<String> recorrerBox1;
     private javax.swing.JButton recorrerButton;
     private javax.swing.JButton recorrerButton1;
+    private javax.swing.JLabel recorrerLabel;
     // End of variables declaration//GEN-END:variables
 }
