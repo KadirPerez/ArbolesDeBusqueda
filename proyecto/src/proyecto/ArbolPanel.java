@@ -38,7 +38,7 @@ public class ArbolPanel extends JPanel {
 
 	    g2d.setFont(new Font("Arial", Font.PLAIN, 30));
 	    g2d.setColor(Color.WHITE);
-	    g2d.drawString(raiz.valor + "", padreX - radio/2, padreY + radio/2);
+	    g2d.drawString(raiz.getValor() + "", padreX - radio/2, padreY + radio/2);
 	    dibujarHijos(g2d, padreX, padreY, arbol.getRaiz());
 	}
     }

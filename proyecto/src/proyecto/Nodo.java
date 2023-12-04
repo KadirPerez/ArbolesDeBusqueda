@@ -2,7 +2,15 @@
 package proyecto;
 
 public class Nodo {
-    int valor;
+    private int valor, altura;
+
+    public int getAltura() {
+	return altura;
+    }
+
+    public void setAltura(int altura) {
+	this.altura = altura;
+    }
     private Nodo izquierda, derecha;
 
     public Nodo(int valor) {
@@ -32,5 +40,15 @@ public class Nodo {
     
     public void setValor(int valor){
 	this.valor = valor;
+    }
+    
+    public int nodosCompletos(Nodo nodo){
+	if(nodo != null){
+	    if(nodo.getDerecha() != null && nodo.getIzquierda() != null){
+		return nodosCompletos(nodo.getIzquierda()) + nodosCompletos(nodo.getDerecha()) + 1;
+	    }
+	    return nodosCompletos(nodo.getIzquierda()) + nodosCompletos(nodo.getDerecha());
+	}
+	return 0;
     }
 }
