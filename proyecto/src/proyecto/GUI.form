@@ -197,9 +197,9 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="nivelTextField" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="nivelLabel" alignment="1" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="nivelTextField" min="-2" pref="35" max="-2" attributes="0"/>
                   </Group>
                   <Component id="mostraLvButton1" max="32767" attributes="0"/>
               </Group>
@@ -250,7 +250,6 @@
     <Component class="javax.swing.JButton" name="insertarNumeroButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Insertar n&#xfa;mero"/>
-        <Property name="actionCommand" type="java.lang.String" value="Insertar n&#xfa;mero"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="insertarNumeroButtonActionPerformed"/>
@@ -259,7 +258,6 @@
     <Component class="javax.swing.JButton" name="eliminarNumeroButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Eliminar n&#xfa;mero"/>
-        <Property name="actionCommand" type="java.lang.String" value="Eliminar n&#xfa;mero"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eliminarNumeroButtonActionPerformed"/>
@@ -343,22 +341,12 @@
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
         <Component class="javax.swing.JLabel" name="recorrerLabel">
-          <Properties>
-            <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
-              <Rectangle value="[0, 0, 0, 0]"/>
-            </Property>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>
     <Component class="javax.swing.JLabel" name="codigoLabel">
     </Component>
     <Component class="javax.swing.JLabel" name="nivelLabel">
-      <Properties>
-        <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
-          <Rectangle value="[0, 0, 0, 0]"/>
-        </Property>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>

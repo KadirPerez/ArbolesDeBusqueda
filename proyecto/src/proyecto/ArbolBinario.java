@@ -51,7 +51,7 @@ public String mostrarNivel (int nivel) {
         for (Integer i:salida)
             aux += i + ", ";
         
-        aux = aux.substring(aux.length() - 3);
+        aux = aux.substring(0, aux.length() - 2);
         
         return aux;
     }

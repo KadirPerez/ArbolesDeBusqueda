@@ -127,7 +127,6 @@ public class GUI extends javax.swing.JFrame {
         });
 
         insertarNumeroButton.setText("Insertar número");
-        insertarNumeroButton.setActionCommand("Insertar número");
         insertarNumeroButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 insertarNumeroButtonActionPerformed(evt);
@@ -135,7 +134,6 @@ public class GUI extends javax.swing.JFrame {
         });
 
         eliminarNumeroButton.setText("Eliminar número");
-        eliminarNumeroButton.setActionCommand("Eliminar número");
         eliminarNumeroButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eliminarNumeroButtonActionPerformed(evt);
@@ -201,10 +199,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        recorrerLabel.setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         jScrollPane1.setViewportView(recorrerLabel);
-
-        nivelLabel.setBounds(new java.awt.Rectangle(0, 0, 0, 0));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -288,9 +283,9 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(nivelTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(nivelLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(nivelLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(nivelTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(mostraLvButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
