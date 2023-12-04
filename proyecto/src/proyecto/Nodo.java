@@ -52,7 +52,7 @@ public class Nodo {
 	return 0;
     }
     
-    public int getLevelsBelowNode(Nodo nodo) {
+    public int obtenerNivelesDebajo(Nodo nodo) {
         if (nodo == null) {
             return 0;
         }
@@ -60,26 +60,26 @@ public class Nodo {
         Queue<Nodo> queue = new LinkedList<>();
         queue.offer(nodo);
 
-        int levelsBelow = 0;
+        int niveles = 0;
 
         while (!queue.isEmpty()) {
             int size = queue.size();
 
             for (int i = 0; i < size; i++) {
-                Nodo current = queue.poll();
+                Nodo n = queue.poll();
 
-                if (current.getIzquierda() != null) {
-                    queue.offer(current.getIzquierda());
+                if (n.getIzquierda() != null) {
+                    queue.offer(n.getIzquierda());
                 }
 
-                if (current.getDerecha() != null) {
-                    queue.offer(current.getDerecha());
+                if (n.getDerecha() != null) {
+                    queue.offer(n.getDerecha());
                 }
             }
 
-            levelsBelow++;
+            niveles++;
         }
 
-        return levelsBelow - 1;
+        return niveles - 1;
     }
 }

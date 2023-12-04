@@ -17,7 +17,7 @@ public class ArbolPanel extends JPanel {
     }
     
     public Dimension getPreferredSize() {
-	return new Dimension(3000, 1000); // Especifica el tamaño preferido del panel
+	return new Dimension(6000, 3000); // Especifica el tamaño preferido del panel
     }
     
     @Override
@@ -34,7 +34,7 @@ public class ArbolPanel extends JPanel {
 	if (raiz != null) {
 	    int ancho = 1;
 	    int alto = 60;
-	    int niveles = raiz.getLevelsBelowNode(raiz);
+	    int niveles = raiz.obtenerNivelesDebajo(raiz);
 	    int extremos = ((int) Math.pow(2, niveles + 1) - 1) * 10;
 		    
 	    int radio = 25;
@@ -51,7 +51,7 @@ public class ArbolPanel extends JPanel {
 	    
 	    g2d.setFont(new Font("Arial", Font.PLAIN, 20));
 	    g2d.setColor(Color.WHITE);
-	    g2d.drawString(raiz.getValor() + "", x + radio, y + radio);
+	    g2d.drawString(raiz.getValor() + "", x + radio / 2, y + radio);
 	    
 	    dibujarArbol(g2d, raiz.getIzquierda(), x - ancho - extremos, y + alto);
 	    dibujarArbol(g2d, raiz.getDerecha(), x + ancho + extremos, y + alto);

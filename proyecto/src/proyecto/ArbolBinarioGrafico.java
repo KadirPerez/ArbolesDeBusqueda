@@ -9,7 +9,7 @@ public final class ArbolBinarioGrafico extends JFrame {
     private final ArbolPanel arbolPanel;
     
     public ArbolBinarioGrafico(String titulo, ArbolBinario arbol) {
-	setBounds(600, 50, 1300, 1000);
+	setBounds(600, 50, 3000, 1000);
         setTitle(titulo);
         setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         
@@ -26,7 +26,7 @@ public final class ArbolBinarioGrafico extends JFrame {
     } 
     
     public void refrescar(ArbolBinario arbol) {
-       	repaint();
-    }
+        repaint();
+        }
 }
 
